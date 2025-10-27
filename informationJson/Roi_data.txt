@@ -1,0 +1,13 @@
+1) 乾溜ガス化炉A_温度_℃
+Kanryū Gasuka Ro - Ondo
+2) 乾溜ガス化炉A_運転状況 ไม่ต้องเก็บ จะคำนวณเอง
+Kanryū Gasuka Ro - Unten Jōkyō
+3) 乾溜空気弁A_開度_% 
+Kanryū Kūki Ben = Kaido
+เตา A B C D  .....
+4) 燃焼炉_温度_℃
+Nenshō Ro - Ondo
+5) 排ガス濃度_CO濃度_ppm
+Haigasu Nōdo - CO Nōdo
+6) 排ガス濃度_O2濃度_%
+Haigasu Nōdo - O2 Nōdo

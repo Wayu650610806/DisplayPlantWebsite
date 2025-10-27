@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latest Uploaded Image</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+      }
+      #image-container {
+        margin-top: 20px;
+        max-width: 90%;
+        border: 1px solid #ccc;
+        padding: 10px;
+      }
+      #latest-image {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+      #status-text {
+        margin-top: 10px;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Latest Uploaded Image</h1>
+    <div id="status-text">Loading...</div>
+    <div id="image-container">
+      <img
+        id="latest-image"
+        src=""
+        alt="Latest Uploaded Image"
+        style="display: none"
+      />
+    </div>
+
+    <script>
+      async function loadLatestImage() {
+        const statusText = document.getElementById("status-text");
+        const latestImage = document.getElementById("latest-image");
+
+        try {
+          // Fetch the latest image URL from the API
+          const response = await fetch("/api/latest_image_url");
+          const data = await response.json();
+
+          if (data.latest_url) {
+            // Set the image source, adding a timestamp query to prevent browser caching
+            latestImage.src = data.latest_url + "?" + new Date().getTime();
+            statusText.textContent = `Last Updated: ${
+              data.timestamp || "Time N/A"
+            }`;
+            latestImage.style.display = "block"; // Show the image
+          } else {
+            statusText.textContent = "No image uploaded yet.";
+            latestImage.style.display = "none"; // Hide the image
+          }
+        } catch (error) {
+          statusText.textContent = "Error fetching data.";
+          console.error("Error fetching latest image URL:", error);
+        }
+      }
+
+      // Load the image when the page loads, and set an interval to refresh
+      document.addEventListener("DOMContentLoaded", loadLatestImage);
+      // Update every 5 seconds
+      setInterval(loadLatestImage, 5000);
+    </script>
+  </body>
+</html>

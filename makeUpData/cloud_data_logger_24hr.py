@@ -8,9 +8,9 @@ from collections import defaultdict
 
 # --- ตั้งค่าการเชื่อมต่อ (เหมือนเดิม) ---
 INFLUX_URL = "https://us-east-1-1.aws.cloud2.influxdata.com"
-INFLUX_TOKEN = "oAtmgomIuy4QVTulsgQq8HAwEZmpXBXM5a9rIsiumVbpbwos21uttKuPZWaiKRlIWieU-tkYhAOqNwU8h4SCSg=="
+INFLUX_TOKEN = "Xttrq8yiXo5GrzZ5p6J2AxzXKYDEniqO9_3fzD_3Zt9fAbalTW1Cbtjt-mjfb9TZuSa-mK8_Iovea-dyIegQ-A=="
 INFLUX_ORG = "KinseiPlant"
-INFLUX_BUCKET = "furnace_data"
+INFLUX_BUCKET = "plant_data"
 
 # --- ฟังก์ชัน write_data (เหมือนเดิม) ---
 def write_data(write_api, tags, fields, timestamp):
@@ -44,21 +44,21 @@ def generate_random_plant_data():
         {'customer': '武京商会', 'province': '群馬県', 'model': 'GB-30W-6000特型', 'sensor_name': '乾溜空気弁A', 'field_name': '開度', 'unit': '%', 'value': random.randint(0, 100), 'status': None},
         {'customer': '武京商会', 'province': '群馬県', 'model': 'GB-30W-6000特型', 'sensor_name': '乾溜空気弁B', 'field_name': '開度', 'unit': '%', 'value': random.randint(0, 100), 'status': None},
         {'customer': '武京商会', 'province': '群馬県', 'model': 'GB-30W-6000特型', 'sensor_name': '燃焼炉', 'field_name': '温度', 'unit': '℃', 'value': round(random.uniform(800, 1200), 2), 'status': None},
-        {'customer': '武京商会', 'province': '群馬県', 'model': 'GB-30W-6000特型', 'sensor_name': '排ガス濃度', 'field_name': 'CO濃度', 'unit': 'ppm', 'value': random.randint(0, 50), 'status': None},
-        {'customer': '武京商会', 'province': '群馬県', 'model': 'GB-30W-6000特型', 'sensor_name': '排ガス濃度', 'field_name': 'O2濃度', 'unit': '%', 'value': round(random.uniform(5, 15), 2), 'status': None},
+        # {'customer': '武京商会', 'province': '群馬県', 'model': 'GB-30W-6000特型', 'sensor_name': '排ガス濃度', 'field_name': 'CO濃度', 'unit': 'ppm', 'value': random.randint(0, 50), 'status': None},
+        # {'customer': '武京商会', 'province': '群馬県', 'model': 'GB-30W-6000特型', 'sensor_name': '排ガス濃度', 'field_name': 'O2濃度', 'unit': '%', 'value': round(random.uniform(5, 15), 2), 'status': None},
         # --- 光陽建設 ---
-        {'customer': '光陽建設', 'province': '広島県', 'model': 'GB-125T-32000特型', 'sensor_name': '乾溜ガス化炉A', 'field_name': '温度', 'unit': '℃', 'value': round(random.uniform(280, 420), 2), 'status': None},
-        {'customer': '光陽建設', 'province': '広島県', 'model': 'GB-125T-32000特型', 'sensor_name': '乾溜ガス化炉A', 'field_name': '運転状況', 'unit': None, 'value': None, 'status': random.choice(statuses)},
-        {'customer': '光陽建設', 'province': '広島県', 'model': 'GB-125T-32000特型', 'sensor_name': '乾溜ガス化炉B', 'field_name': '温度', 'unit': '℃', 'value': round(random.uniform(10, 220), 2), 'status': None},
-        {'customer': '光陽建設', 'province': '広島県', 'model': 'GB-125T-32000特型', 'sensor_name': '乾溜ガス化炉B', 'field_name': '運転状況', 'unit': None, 'value': None, 'status': random.choice(statuses)},
-        {'customer': '光陽建設', 'province': '広島県', 'model': 'GB-125T-32000特型', 'sensor_name': '乾溜ガス化炉C', 'field_name': '温度', 'unit': '℃', 'value': round(random.uniform(450, 600), 2), 'status': None},
-        {'customer': '光陽建設', 'province': '広島県', 'model': 'GB-125T-32000特型', 'sensor_name': '乾溜ガス化炉C', 'field_name': '運転状況', 'unit': None, 'value': None, 'status': random.choice(statuses)},
-        {'customer': '光陽建設', 'province': '広島県', 'model': 'GB-125T-32000特型', 'sensor_name': '乾溜空気弁A', 'field_name': '開度', 'unit': '%', 'value': random.randint(0, 100), 'status': None},
-        {'customer': '光陽建設', 'province': '広島県', 'model': 'GB-125T-32000特型', 'sensor_name': '乾溜空気弁B', 'field_name': '開度', 'unit': '%', 'value': random.randint(0, 100), 'status': None},
-        {'customer': '光陽建設', 'province': '広島県', 'model': 'GB-125T-32000特型', 'sensor_name': '乾溜空気弁C', 'field_name': '開度', 'unit': '%', 'value': random.randint(0, 100), 'status': None},
-        {'customer': '光陽建設', 'province': '広島県', 'model': 'GB-125T-32000特型', 'sensor_name': '燃焼炉', 'field_name': '温度', 'unit': '℃', 'value': round(random.uniform(900, 1300), 2), 'status': None},
-        {'customer': '光陽建設', 'province': '広島県', 'model': 'GB-125T-32000特型', 'sensor_name': '排ガス濃度', 'field_name': 'CO濃度', 'unit': 'ppm', 'value': random.randint(0, 60), 'status': None},
-        {'customer': '光陽建設', 'province': '広島県', 'model': 'GB-125T-32000特型', 'sensor_name': '排ガス濃度', 'field_name': 'O2濃度', 'unit': '%', 'value': round(random.uniform(4, 12), 2), 'status': None},
+        {'customer': 'ジェムカ', 'province': '山口県', 'model': 'GB-250T-58000特型', 'sensor_name': '乾溜ガス化炉A', 'field_name': '温度', 'unit': '℃', 'value': round(random.uniform(280, 420), 2), 'status': None},
+        {'customer': 'ジェムカ', 'province': '山口県', 'model': 'GB-250T-58000特型', 'sensor_name': '乾溜ガス化炉A', 'field_name': '運転状況', 'unit': None, 'value': None, 'status': random.choice(statuses)},
+        {'customer': 'ジェムカ', 'province': '山口県', 'model': 'GB-250T-58000特型', 'sensor_name': '乾溜ガス化炉B', 'field_name': '温度', 'unit': '℃', 'value': round(random.uniform(10, 220), 2), 'status': None},
+        {'customer': 'ジェムカ', 'province': '山口県', 'model': 'GB-250T-58000特型', 'sensor_name': '乾溜ガス化炉B', 'field_name': '運転状況', 'unit': None, 'value': None, 'status': random.choice(statuses)},
+        {'customer': 'ジェムカ', 'province': '山口県', 'model': 'GB-250T-58000特型', 'sensor_name': '乾溜ガス化炉C', 'field_name': '温度', 'unit': '℃', 'value': round(random.uniform(450, 600), 2), 'status': None},
+        {'customer': 'ジェムカ', 'province': '山口県', 'model': 'GB-250T-58000特型', 'sensor_name': '乾溜ガス化炉C', 'field_name': '運転状況', 'unit': None, 'value': None, 'status': random.choice(statuses)},
+        {'customer': 'ジェムカ', 'province': '山口県', 'model': 'GB-250T-58000特型', 'sensor_name': '乾溜空気弁A', 'field_name': '開度', 'unit': '%', 'value': random.randint(0, 100), 'status': None},
+        {'customer': 'ジェムカ', 'province': '山口県', 'model': 'GB-250T-58000特型', 'sensor_name': '乾溜空気弁B', 'field_name': '開度', 'unit': '%', 'value': random.randint(0, 100), 'status': None},
+        {'customer': 'ジェムカ', 'province': '山口県', 'model': 'GB-250T-58000特型', 'sensor_name': '乾溜空気弁C', 'field_name': '開度', 'unit': '%', 'value': random.randint(0, 100), 'status': None},
+        {'customer': 'ジェムカ', 'province': '山口県', 'model': 'GB-250T-58000特型', 'sensor_name': '燃焼炉', 'field_name': '温度', 'unit': '℃', 'value': round(random.uniform(900, 1300), 2), 'status': None},
+        {'customer': 'ジェムカ', 'province': '山口県', 'model': 'GB-250T-58000特型', 'sensor_name': '排ガス濃度', 'field_name': 'CO濃度', 'unit': 'ppm', 'value': random.randint(0, 60), 'status': None},
+        {'customer': 'ジェムカ', 'province': '山口県', 'model': 'GB-250T-58000特型', 'sensor_name': '排ガス濃度', 'field_name': 'O2濃度', 'unit': '%', 'value': round(random.uniform(4, 12), 2), 'status': None},
     ]
     return raw_data
 
@@ -103,7 +103,7 @@ def main():
         # ลดเวลาลง 5 นาทีสำหรับรอบถัดไป
         current_time -= timedelta(minutes=30)
 
-    client.close()
+    # client.close()
     print("\n✨ สร้างข้อมูลย้อนหลัง 24 ชั่วโมงสำเร็จ!")
 
 if __name__ == "__main__":

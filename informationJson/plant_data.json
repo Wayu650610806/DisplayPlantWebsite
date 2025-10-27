@@ -1,0 +1,47 @@
+{
+  "富山環境整備": {
+    "customer": "富山環境整備",
+    "province": "富山県",
+    "image_url": "/static/plant/富山環境整備環境整備.jpg"
+  },
+  "ジェムカ": {
+    "customer": "ジェムカ",
+    "model": "GB-250T-58000特型",
+    "province": "山口県",
+    "image_url": "/static/plant/ジェムカ.jpg"
+  },
+  "ループ": {
+    "customer": "ループ",
+    "province": "青森県",
+    "image_url": "/static/plant/ループ.jpeg"
+  },
+  "ニセコ": {
+    "customer": "ニセコ",
+    "province": "北海道",
+    "image_url": "/static/plant/ニセコ.jpeg"
+  },
+  "武京商会": {
+    "customer": "武京商会",
+    "model": "GB-30W-6000特型",
+    "province": "群馬県",
+    "image_url": "/static/plant/GB-30W-6000特型.png"
+  },
+  "光陽建設": {
+    "customer": "光陽建設",
+    "model": "GB-125T-32000特型",
+    "province": "広島県",
+    "image_url": "/static/plant/GB-125T-32000特型.png"
+  },
+  "鈴木工業": {
+    "customer": "鈴木工業",
+    "model": "GB-30W-12000特型",
+    "province": "宮城県",
+    "image_url": "/static/plant/鈴木工業.png"
+  },
+  "直富商事": {
+    "customer": "直富商事",
+    "model": "GB-100T-17000特型",
+    "province": "長野県",
+    "image_url": "/static/plant/直富商事.png"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "東北黒沢建設殿": {
+    "customer": "東北黒沢建設殿",
+    "model": "GB-100W-23000特型",
+    "province": "宮城県",
+    "image_url": "/static/plant/東北黒沢建設殿.jpg"
+  },
+  "新潟環境開発殿": {
+    "customer": "新潟環境開発殿",
+    "model": "GB-110T-40000特型",
+    "province": "新潟県",
+    "image_url": "/static/plant/新潟環境開発殿.jpg"
+  },
+  "マルエス産業殿": {
+    "customer": "マルエス産業殿",
+    "model": "GB-200T-30000特型",
+    "province": "岐阜県",
+    "image_url": "/static/plant/マルエス産業殿.jpg"
+  },
+  "高岡市衛生公社殿": {
+    "customer": "高岡市衛生公社殿",
+    "model": "GB-60T-12000PB特型",
+    "province": "富山県",
+    "image_url": "/static/plant/高岡市衛生公社殿.png"
+  },
+  "東名興產殿": {
+    "customer": "東名興產殿",
+    "model": "GB-75W-27000特型",
+    "province": "静岡県",
+    "image_url": "/static/plant/東名興產殿.jpg"
+  },
+  "アンビエンテ丸大殿": {
+    "customer": "アンビエンテ丸大殿",
+    "model": "GB-30T-11000特型",
+    "province": "北海道",
+    "image_url": "/static/plant/アンビエンテ丸大殿.jpg"
+  },
+  "GEF株式会社殿": {
+    "customer": "GEF株式会社殿",
+    "model": "GB-125T-28000特型",
+    "province": "福島県",
+    "image_url": "/static/plant/GEF株式会社殿.jpg"
+  },
+  "横浜環境保全殿": {
+    "customer": "横浜環境保全殿",
+    "model": "GB-100T-24000特型",
+    "province": "神奈川県",
+    "image_url": "/static/plant/横浜環境保全殿.jpg"
+  },
+  "ミヤテック": {
+    "customer": "ミヤテック",
+    "model": "GB-100W-18000特型",
+    "province": "三重県",
+    "image_url": "/static/plant/ミヤテック.jpg"
+  }
+}
